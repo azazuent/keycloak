@@ -15,10 +15,7 @@ services:
       POSTGRES_USER: keycloak
       POSTGRES_PASSWORD: password
     volumes:
-      - type: tmpfs
-        target: /var/lib/postgresql/data
-        tmpfs:
-          size: 100000000
+          - pgdata:/var/lib/postgresql/data
     logging: *logging
 
   keycloak:
@@ -42,6 +39,7 @@ services:
       - ${KC_PORT}:8080
     volumes:
       - ./keycloak/realm.json:/opt/keycloak/data/import/realm.json:ro
+      - ./keycloak/themes:/opt/keycloak/themes:ro
     logging: *logging
 
   prometheus:
@@ -88,3 +86,6 @@ services:
       - ./grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
       - ./grafana/datasources:/etc/grafana/provisioning/datasources:ro
     logging: *logging
+
+volumes:
+  pgdata:

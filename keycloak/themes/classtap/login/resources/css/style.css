@@ -1,0 +1,89 @@
+body {
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ font-family: "Liberation Sans" !important;
+  margin: 0;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+.forgot-password a {
+  color: #495057;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  opacity: .85;
+}
+
+.login-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 15px;
+  transition:  border-color .2s;
+}
+
+.input-group:hover {
+  border-color:  #94a3b8;
+}
+
+.input-group svg {
+  margin-right: 10px;
+  color: #6c757d;
+  padding-left: 10px;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  outline: none;
+  flex-grow: 1;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 0;
+  color: #495057;
+}
+
+.login-button {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #ff5900;
+}
+
+.focused {
+    border-color:  #f97316 !important;
+}
+
+.error-message {
+  text-align: center;
+  margin-bottom: 10px;
+  color: red
+}
